@@ -49,6 +49,7 @@ const Posts = () => {
                     }
                     if (!isincluded(dat)) {
                         compl.push(dat)
+                        console.log(compl,'c')
                         setTot(compl)
                     }
                 }
@@ -59,6 +60,7 @@ const Posts = () => {
         }
     }, [posts])
 
+    console.log(tot,'t')
     const isincluded = (dat) => {
         compl.forEach((obj) => {
             if (obj.id == dat.id) {
