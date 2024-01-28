@@ -41,7 +41,6 @@
       margin: 1em;
   }
   .home{
-    /* overflow: scroll; */
     top:20%;
     transform: translate(-50%);
   }

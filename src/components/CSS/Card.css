@@ -7,16 +7,13 @@
   }
 }
 .card{
-    /* animation: rotate 2.5s linear infinite; */
-    /* background-color: rgb(197 179 250 / 55%); */
-    background: linear-gradient(to bottom,rgb(197 179 250 / 45%),rgb(197 179 250 / 75%));
+    background: linear-gradient(to bottom,rgb(197 179 250 / 75%),rgb(197 179 250 / 75%));
     display: inline-block;
     height: 22em;
     width: 25%;
     border-radius: 2em;
     margin: 2em;
     padding: 0.5em;
-    /* color: white; */
 }
 .tit{
   color: #3a1c8a;
