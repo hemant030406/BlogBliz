@@ -1,0 +1,81 @@
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.card{
+    /* animation: rotate 2.5s linear infinite; */
+    /* background-color: rgb(197 179 250 / 55%); */
+    background: linear-gradient(to bottom,rgb(197 179 250 / 45%),rgb(197 179 250 / 75%));
+    display: inline-block;
+    height: 22em;
+    width: 25%;
+    border-radius: 2em;
+    margin: 2em;
+    padding: 0.5em;
+    /* color: white; */
+}
+.tit{
+  color: #3a1c8a;
+    text-align: center;
+    padding: 0.5em;
+    font-weight: 750;
+}
+.author{
+  color: #3a1c8a;
+    text-align: right;
+    font-weight: 500;
+    margin-right: 0.5em;
+    font-style: italic;
+}
+.shrtdesc{
+  color: #3a1c8a;
+    font-weight: 600;
+    padding: 1em;
+    text-align: justify;
+}
+.crdmot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.crdlk,.crddlk{
+  color: #3a1c8a;
+  margin: 2em 0em;
+  display: inline-block;
+}
+.crdlk>i::before,.crddlk>i::before{
+  display: flex;
+  width: 2.5em;
+  justify-content: center;
+}
+.crdlk>p,.crddlk>p{
+  font-weight: 500;
+  width: 5em;
+  text-align: center;
+}
+
+@media screen and (max-width:1100px){
+  .card{
+    width:35%;
+  }
+}
+@media screen and (max-width:750px){
+  .card{
+    width:50%;
+  }
+}
+@media screen and (max-width:550px){
+  .card{
+    width:70%;
+  }
+}
+@media screen and (max-width:400px){
+  .card{
+    width:80%;
+  }
+}

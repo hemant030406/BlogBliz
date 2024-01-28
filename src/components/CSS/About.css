@@ -1,0 +1,18 @@
+.about{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-weight: 700;
+    background-color:rgb(222 129 253 / 60%);
+    padding: 2em;
+    text-align: justify;
+    border-radius: 2em;
+}
+@media screen and (max-width:550px) {
+    .about{
+        width: 15em;
+        transform: translate(-45%,-20%);
+    }
+}
