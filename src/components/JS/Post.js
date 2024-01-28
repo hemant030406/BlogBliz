@@ -5,18 +5,29 @@ import { useParams } from "react-router";
 const Post = () => {
   const { id } = useParams()
   const [post, setPost] = useState([])
+
   const fetchData = async () => {
-    let pstdat = await fetch(`https://webmosaic.petrichor.events/post?id=${id}`).then(res => res.json())
-    let authId = pstdat.author_id
-    let authdat = await fetch(`https://webmosaic.petrichor.events/author?id=${authId}`).then(res => res.json())
-    let comment = await fetch(`https://webmosaic.petrichor.events/comments?post_id=${id}`).then(res => {
-      if (res.ok) {
-        return res.json()
-      }
-      else {
-        return [{ body: 'No comments yet', id: 1 }]
-      }
-    })
+
+    let pstdat, comment, authdat;
+    
+    await fetch(`https://webmosaic.petrichor.events/post?id=${id}`)
+      .then(res => res.json())
+      .then(async (res) => {
+        pstdat = res;
+        authdat = await fetch(`https://webmosaic.petrichor.events/author?id=${res.author_id}`)
+          .then(res => res.json())
+      })
+
+    comment = await fetch(`https://webmosaic.petrichor.events/comments?post_id=${id}`)
+      .then(res => {
+        if (res.ok) {
+          return res.json()
+        }
+        else {
+          return [{ body: 'No comments yet', id: 1 }]
+        }
+      })
+
     setPost([
       {
         'id': pstdat.id,
@@ -46,11 +57,11 @@ const Post = () => {
     if (doc != null) {
       doc.style.visibility = 'visible';
     }
-    if(cmimg != null){
-      if(post[0]?.comments[0].body == 'No comments yet'){
+    if (cmimg != null) {
+      if (post[0]?.comments[0].body == 'No comments yet') {
         cmimg.style.display = 'none';
       }
-      else{
+      else {
         cmimg.style.display = 'inline-flex';
       }
     }
