@@ -47,12 +47,15 @@ const Posts = () => {
                         "author": author,
                         "comments": comments,
                     }
-                    if (!isincluded(dat)) {
-                        compl.push(dat)
-                        console.log(compl,'c')
                         setTot(tot => {
-                            console.log('tot set')
-                            return compl})
+                            return [...tot,dat]
+                        })
+                    if (!isincluded(dat)) {
+                        // compl.push(dat)
+                        // console.log(compl,'c')
+                        // setTot(tot => {
+                        //     console.log('tot set')
+                        //     return compl})
                     }
                 }
             }
