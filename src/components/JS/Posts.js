@@ -61,7 +61,7 @@ const Posts = () => {
     }, [posts])
 
     console.log(tot,'t')
-                        console.log(compl,'d')
+    console.log(compl,'d')
     const isincluded = (dat) => {
         compl.forEach((obj) => {
             if (obj.id == dat.id) {
@@ -70,6 +70,8 @@ const Posts = () => {
         })
         return false
     }
+
+    useEffect(()=>{},[tot])
 
     return (
         <>
