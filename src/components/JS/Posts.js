@@ -23,7 +23,6 @@ const Posts = () => {
         async function func() {
             for (let post of posts.posts) {
                 if (post) {
-                    console.log(post)
                     let id = post.id, title = post.name, body, author_id, author, likes, dislikes, comments = [];
                     await fetch(`https://webmosaic.petrichor.events/post?id=${id}`)
                         .then(res => res.json())
@@ -47,16 +46,9 @@ const Posts = () => {
                         "author": author,
                         "comments": comments,
                     }
-                        setTot(tot => {
-                            return [...tot,dat]
-                        })
-                    if (!isincluded(dat)) {
-                        // compl.push(dat)
-                        // console.log(compl,'c')
-                        // setTot(tot => {
-                        //     console.log('tot set')
-                        //     return compl})
-                    }
+                    setTot(tot => {
+                        return [...tot, dat]
+                    })
                 }
             }
         }
@@ -64,20 +56,6 @@ const Posts = () => {
             func()
         }
     }, [posts])
-
-    console.log(tot,'t')
-    const isincluded = (dat) => {
-        compl.forEach((obj) => {
-            if (obj.id == dat.id) {
-                return true
-            }
-        })
-        return false
-    }
-
-    useEffect(()=>{
-        console.log('tot changed')
-    },[tot])
 
     return (
         <>
