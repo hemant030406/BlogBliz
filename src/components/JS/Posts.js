@@ -23,6 +23,7 @@ const Posts = () => {
         async function func() {
             for (let post of posts.posts) {
                 if (post) {
+                    console.log('y')
                     let id = post.id, title = post.name, body, author_id, author, likes, dislikes, comments = [];
                     await fetch(`https://webmosaic.petrichor.events/post?id=${id}`)
                         .then(res => res.json())
@@ -37,20 +38,6 @@ const Posts = () => {
                         .then(data => {
                             author = data.name;
                         })
-                    // await fetch(`https://webmosaic.petrichor.events/comments?post_id=${id}`)
-                    //     .then(res => {
-                    //         if (!res.ok) {
-                    //             return {
-                    //                 body: []
-                    //             }
-                    //         }
-                    //         else {
-                    //             return res.json()
-                    //         }
-                    //     })
-                    //     .then(data => {
-                    //         comments = data
-                    //     })
                     dat = {
                         "id": id,
                         "title": title,
