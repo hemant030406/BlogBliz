@@ -50,7 +50,9 @@ const Posts = () => {
                     if (!isincluded(dat)) {
                         compl.push(dat)
                         console.log(compl,'c')
-                        setTot(tot => compl)
+                        setTot(tot => {
+                            console.log('tot set')
+                            return compl})
                     }
                 }
             }
