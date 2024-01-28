@@ -23,7 +23,7 @@ const Posts = () => {
         async function func() {
             for (let post of posts.posts) {
                 if (post) {
-                    console.log('y')
+                    console.log(post)
                     let id = post.id, title = post.name, body, author_id, author, likes, dislikes, comments = [];
                     await fetch(`https://webmosaic.petrichor.events/post?id=${id}`)
                         .then(res => res.json())
