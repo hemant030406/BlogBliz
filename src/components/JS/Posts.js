@@ -7,7 +7,6 @@ import Card from "./Card.js"
 const Posts = () => {
     const [posts, setPosts] = useState("")
     const [tot, setTot] = useState([])
-    var compl = [];
     var dat = {};
     var rawposts;
     const fetchData = async () => {

@@ -1,0 +1,6 @@
+export let URL = 'https://webmosaic.petrichor.events/'
+export let posts = 'posts/'
+export let post = 'post?id='
+export let Author = 'author?id='
+export let Comments = 'commments?post_id='
+export let about = 'about/'
