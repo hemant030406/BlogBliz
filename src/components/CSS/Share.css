@@ -1,0 +1,28 @@
+.share{
+    background-color: rgba(256,256,256,0.75);
+    padding: 3em;
+    width: 28em;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.large-icon{
+    font-size: 400%;
+}
+.social{
+    display: inline-flex;
+    cursor: pointer;
+    width: 5em;
+    margin: 1em;
+    align-items: center;
+    justify-content: center;
+}
+.social > p{
+    width: 5em;
+    text-align: center;
+}

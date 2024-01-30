@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import "../CSS/Post.css"
 import { useParams } from "react-router";
+import Share from "./Share";
 
 const Post = () => {
   const { id } = useParams()
   const [post, setPost] = useState([])
+  const cur = window.location.host + window.location.pathname
 
   const fetchData = async () => {
 
     let pstdat, comment, authdat;
-    
+
     await fetch(`https://webmosaic.petrichor.events/post?id=${id}`)
       .then(res => res.json())
       .then(async (res) => {
@@ -67,6 +69,11 @@ const Post = () => {
     }
   }
 
+  const show = () => {
+    var doc = document.querySelector('.share')
+    doc.style.visibility = 'visible';
+  }
+
   return (
     <>
       <div className="container">
@@ -93,9 +100,14 @@ const Post = () => {
               <i className="fa-regular fa-comment fa-2xl" style={{ color: "rgb(3 127 102)" }}></i>
               <p>comments</p>
             </div>
+            <div className="sharing" onClick={()=>{show()}}>
+              <i className="fas fa-share-alt fa-2xl" style={{ color: "rgb(3 127 102)" }}></i>
+              <p>Share</p>
+            </div>
           </div>
         </div>
       </div>
+      <Share/>
       <div className="comments">
         <p style={{ float: 'right', marginTop: '-1em', fontWeight: '700', fontSize: 'larger', cursor: 'pointer' }} onClick={() => { clicked() }}>X</p>
         <h4 style={{ textAlign: 'center' }}>Comments</h4>
