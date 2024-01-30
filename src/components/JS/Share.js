@@ -9,6 +9,11 @@ const Share = () => {
         copyText.select();
         copyText.setSelectionRange(0, 99999);
         navigator.clipboard.writeText(copyText.value);
+        let doc = document.querySelector('.cpy');
+        doc.innerHTML = 'Copied!';
+        setTimeout(() => {
+        doc.innerHTML = 'Copy';
+        }, 1500);
     }
 
     const hide = () => {
@@ -45,7 +50,7 @@ const Share = () => {
             </div>
             <div style={{display:'inline-flex',justifyContent:'center',width:"28em"}}>
             <input id="url" type="text" value={`https://${cur}`} style={{height:'2em',width:'25em',}}></input>
-            <button style={{height:'2.4em',width:'5em',marginLeft:'0.2em',cursor:'pointer'}} onClick={()=>{copy()}}>Copy</button>
+            <button className="cpy" style={{height:'2.4em',width:'5em',marginLeft:'0.2em',cursor:'pointer'}} onClick={()=>{copy()}}>Copy</button>
             </div>
         </div>
     )
