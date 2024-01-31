@@ -177,6 +177,9 @@
     .comments{
         width: 50vw;
     }
+    .share{
+        margin-top: -21em;
+    }
 }
 @media screen and (max-width:600px) {
 }
