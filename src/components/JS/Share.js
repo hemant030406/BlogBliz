@@ -48,8 +48,8 @@ const Share = () => {
             <p style={{display:'block'}}>Telegram</p>
             </a>
             </div>
-            <div style={{display:'inline-flex',justifyContent:'center',width:"28em"}}>
-            <input id="url" type="text" value={`https://${cur}`} style={{height:'2em',width:'25em',}}></input>
+            <div className="inp">
+            <input id="url" type="text" value={`https://${cur}`} ></input>
             <button className="cpy" style={{height:'2.4em',width:'5em',marginLeft:'0.2em',cursor:'pointer'}} onClick={()=>{copy()}}>Copy</button>
             </div>
         </div>

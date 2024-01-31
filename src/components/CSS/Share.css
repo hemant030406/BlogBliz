@@ -22,7 +22,36 @@ a{
     align-items: center;
     justify-content: center;
 }
-.social > p{
+.social p{
     width: 5em;
     text-align: center;
+}
+.inp input{
+    height:2em;
+    width:25em;
+}
+.inp{
+    display:inline-flex;
+    justify-content:center;
+    width:28em;
+}
+
+@media screen and (max-width:600px) {
+    .large-icon{
+        font-size: 200%;
+        width: 2.5em;
+        display: inline-flex;
+        justify-content: center;
+    }
+    .social p{
+        font-size: 75%;
+        width:7em;
+    }
+    .share{
+        width: 14em;
+        padding: 3em 1.5em;
+    }
+    .inp{
+        width: 14em;
+    }
 }
