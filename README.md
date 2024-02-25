@@ -1,5 +1,5 @@
 # Website Link
-[BlogBliz](https://blogbliz.vercel.app/)
+The BlogBliz website : [BlogBliz](https://blogbliz.vercel.app/)
 
 # Getting Started with Create React App
 
